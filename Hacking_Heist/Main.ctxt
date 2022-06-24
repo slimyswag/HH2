@@ -3,4 +3,9 @@ comment0.target=Main
 comment0.text=\r\n\ This\ is\ true\r\n\r\n\ @author\ Ethan\ Cuthrell\r\n\ @version\ 6/24\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment1.text=\r\n\ Pollution\ fireP\ \=\ new\ Pollution(10,\ "Fireplace");\r\n\ \ \ \ \ \ \ \ Pollution\ forestF\ \=\ new\ Pollution(60,\ "Forest\ Fire");\r\n\ \ \ \ \ \ \ \ Pollution\ car\ \=\ new\ Pollution(20,\ "Car");\r\n\ \ \ \ \ \ \ \ Pollution\ plane\ \=\ new\ Pollution(40,\ "Plane");\r\n\ \ \ \ \ \ \ \ Pollution\ factory\ \=\ new\ Pollution(100,\ "Factory");\r\n\ \ \ \ \ \ \ \ Pollution\ powerP\ \=\ new\ Pollution(70,\ "Power\ Plant");\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ Attacks\ conserveP\ \=\ new\ Attacks(25,\ "Conserve\ Power");\r\n\ \ \ \ \ \ \ \ Attacks\ filter\ \=\ new\ Attacks(10,\ "Fireplace\ Filters");\r\n\ \ \ \ \ \ \ \ Attacks\ tree\ \=\ new\ Attacks(50,\ "Plant\ a\ Tree");\r\n\ \ \ \ \ \ \ \ Attacks\ publicT\ \=\ new\ Attacks(30,\ "Use\ Public\ Transport");\r\n
+comment2.params=
+comment2.target=void\ round1()
+comment3.params=
+comment3.target=void\ attack1()
+numComments=4

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Write a description of class Pollution here.
@@ -7,7 +9,11 @@
  */
 public class Pollution
 {
-    // instance variables - replace the example below with your own
+    /**
+     * Pollution example ideas: fireplaces, forest fires, cars, planes,
+     * factories, power plants
+     * 
+     */
     private int health;
     private String name;
 
@@ -19,21 +25,24 @@ public class Pollution
         health = h;
         name = n;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    public void setHealth(int newH)
     {
-        // put your code here
-        return 0;
+        health = newH;
+    }
+    
+    public int getHealth()
+    {
+        return health;
+    }
+    
+    public String getName()
+    {
+        return name;
     }
     
     public String toString()
     {
-        return name + " has " + health + " health";
+        return name + ": " + health + " health";
     }
 }

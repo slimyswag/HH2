@@ -17,8 +17,10 @@ public class Attacks
     private int dmg;
     /**
      * private int cooldown;
-    private ArrayList<String>
+    private int current;
      */
+    
+
     
     /**
      * Constructor for objects of class Attacks
@@ -40,16 +42,18 @@ public class Attacks
         return title;
     }
     
-    /**
-     * public int getCooldown()
+    public String toString()
     {
-        return cooldown;
+        return title + ": " + dmg + " damage";
     }
     
-    public void cooldown()
+    /**
+     * public void cooldown()
     {
         
     }
      */
+    
+    
     
 }

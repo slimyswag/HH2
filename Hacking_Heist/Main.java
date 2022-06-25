@@ -35,6 +35,7 @@ public class Main
         System.out.println(fireP);
         System.out.println("");
         int num = 0;
+        int turns = 0;
         String target = "";
         while (fireP.getHealth() > 0)
         {
@@ -61,6 +62,7 @@ public class Main
             {
                 fireP.setHealth(fireP.getHealth() - 30);
             }
+            turns++;
         }
         System.out.println("Fireplace has been defeated");
         System.out.println("Round 1 is over");
@@ -124,7 +126,7 @@ public class Main
                     car.setHealth(car.getHealth() - 30);
                 }
             }
-            
+            turns++;
             if((fireP2.getHealth() <= 0) && (car.getHealth() <= 0))
             {
                 System.out.println("Fireplace and Car have been Defeated");
@@ -213,7 +215,7 @@ public class Main
                     car2.setHealth(car2.getHealth() - 30);
                 }
             }
-            
+            turns++;
             if((car2.getHealth() <= 0) && (plane.getHealth() <= 0))
             {
                 System.out.println("Car and Plane have been Defeated");
@@ -302,7 +304,7 @@ public class Main
                     forestF.setHealth(forestF.getHealth() - 30);
                 }
             }
-            
+            turns++;
             if((fireP3.getHealth() <= 0) && (forestF.getHealth() <= 0))
             {
                 System.out.println("Fireplace and Forest Fire have been Defeated");
@@ -332,12 +334,143 @@ public class Main
         }
         System.out.println("Round 4 is over");
         System.out.println("");
-        /**
-         * //Round 5
+        //Round 5
         System.out.println("Round 5 has begun");
         System.out.println("Enemies: ");
-         */
-        
+        Pollution car3 = new Pollution(20, "Car");
+        Pollution factory = new Pollution(70, "Factory");
+        System.out.println(car3);
+        System.out.println(factory);
+        System.out.println("");
+        num = 0;
+        while ((car3.getHealth() > 0) || (factory.getHealth() > 0))
+        {
+            System.out.println("Possible Attacks: ");
+            for (int i = 0; i < attackL.size(); i++)
+            {
+                System.out.println(attackL.get(i));
+            }
+            System.out.println("Choose a target for attack: ");
+            target = input.next();
+            System.out.println("Choose an attack (Enter 1, 2, 3, or 4): ");
+            num = input.nextInt();
+            
+            if (target.equals("Car"))
+            {
+                if (num == 1)
+                {
+                    car3.setHealth(car3.getHealth() - 25);
+                }
+                if (num == 2)
+                {
+                    car3.setHealth(car3.getHealth() - 10);
+                }
+                if (num == 3)
+                {
+                    car3.setHealth(car3.getHealth() - 50);
+                }
+                if (num == 4)
+                {
+                    car3.setHealth(car3.getHealth() - 30);
+                }
+            }
+            if (target.equals("Factory"))
+            {
+                if (num == 1)
+                {
+                    factory.setHealth(factory.getHealth() - 25);
+                }
+                if (num == 2)
+                {
+                    factory.setHealth(factory.getHealth() - 10);
+                }
+                if (num == 3)
+                {
+                    factory.setHealth(factory.getHealth() - 50);
+                }
+                if (num == 4)
+                {
+                    factory.setHealth(factory.getHealth() - 30);
+                }
+            }
+            turns++;
+            if((car3.getHealth() <= 0) && (factory.getHealth() <= 0))
+            {
+                System.out.println("Car and Factory have been Defeated");
+            }
+            else if(car3.getHealth() <= 0)
+            {
+                System.out.println("Enemies: ");
+                System.out.println("Car: Defeated");
+                System.out.println(factory);
+                System.out.println("");
+            }
+            else if(factory.getHealth() <= 0)
+            {
+                System.out.println("Enemies: ");
+                System.out.println(car3);
+                System.out.println("Factory: Defeated");
+                System.out.println("");
+            }
+            else
+            {
+                System.out.println("Enemies: ");
+                System.out.println(car3);
+                System.out.println(factory);
+                System.out.println("");
+            }
+            
+        }
+        System.out.println("Round 5 is over");
+        System.out.println("");
+        //Round 6
+        System.out.println("Round 6 has begun");
+        System.out.println("Enemies: ");
+        Pollution powerP = new Pollution(110, "Power Plant");
+        System.out.println(powerP);
+        System.out.println("");
+        num = 0;
+        while (powerP.getHealth() > 0)
+        {
+            System.out.println("Possible Attacks: ");
+            for (int i = 0; i < attackL.size(); i++)
+            {
+                System.out.println(attackL.get(i));
+            }
+            System.out.println("Choose an attack (Enter 1, 2, 3, or 4): ");
+            num = input.nextInt();
+            if (num == 1)
+            {
+                System.out.println("Critical Strike");
+                powerP.setHealth(powerP.getHealth() - 40);
+            }
+            if (num == 2)
+            {
+                powerP.setHealth(powerP.getHealth() - 10);
+            }
+            if (num == 3)
+            {
+                powerP.setHealth(powerP.getHealth() - 50);
+            }
+            if (num == 4)
+            {
+                powerP.setHealth(powerP.getHealth() - 30);
+            }
+            turns++;
+            if(powerP.getHealth() <= 0)
+            {
+                System.out.println("Power Plant has been Defeated");
+            }
+            else
+            {
+                System.out.println("Enemies: ");
+                System.out.println(powerP);
+                System.out.println("");
+            }
+        }
+        System.out.println("Round 6 is over");
+        System.out.println("");
+        System.out.println("Congrats! You won against the pollution in " + turns  + " turns!");
     }
      
     public static ArrayList<Attacks> attackList()
